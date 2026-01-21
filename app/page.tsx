@@ -1,23 +1,35 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { MessageCircle, CheckCircle, BookOpen, Users, FileEdit, Target, Award, Clock } from "lucide-react"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  MessageCircle,
+  CheckCircle,
+  BookOpen,
+  Users,
+  FileEdit,
+  Target,
+  Award,
+  Clock,
+} from "lucide-react";
+import Image from "next/image";
 export default function Home() {
-  const whatsappNumber = "+5493815040885" // Reemplaza con tu número real
-  const whatsappMessage = "Hola, me interesa consultar sobre los servicios de TesisWork"
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+  const whatsappNumber = "+5493815040885"; // Reemplaza con tu número real
+  const whatsappMessage =
+    "Hola, me interesa consultar sobre los servicios de TesisWork";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   const services = [
     {
       title: "Acompañamiento académico",
-      description: "Orientación personalizada durante todo el proceso de tu tesis",
+      description:
+        "Orientación personalizada durante todo el proceso de tu tesis",
       icon: Users,
     },
     {
       title: "Orientación en el proceso de tesis",
-      description: "Guía metodológica y estructural para tu trabajo de investigación",
+      description:
+        "Guía metodológica y estructural para tu trabajo de investigación",
       icon: Target,
     },
     {
@@ -40,12 +52,11 @@ export default function Home() {
       description: "Asesoramiento en diseño de investigación y análisis",
       icon: Award,
     },
-  ]
+  ];
 
   const packages = [
     {
       name: "Acompañamiento Inicial",
-      price: "$120.000",
       features: [
         "Qué hago: defino con vos la base del trabajo.",
         "Delimitación del tema y problema.",
@@ -56,7 +67,6 @@ export default function Home() {
     },
     {
       name: "Corrección Integral",
-      price: "$250.000",
       features: [
         "Qué hago: reviso y optimizo tu borrador.",
         "Corrección de redacción y coherencia.",
@@ -68,7 +78,6 @@ export default function Home() {
     },
     {
       name: "Acompañamiento Completo",
-      price: "$450.000",
       features: [
         "Qué hago: acompaño todo el proceso de escritura.",
         "Asesoramiento metodológico continuo.",
@@ -79,7 +88,6 @@ export default function Home() {
     },
     {
       name: "Redacción académica completa",
-      price: "Desde $900.000",
       features: [
         "Qué hago: acompaño de forma intensiva la construcción del trabajo.",
         "Asistencia en redacción académica.",
@@ -88,7 +96,7 @@ export default function Home() {
         "Adecuación al nivel académico.",
       ],
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen">
@@ -96,7 +104,7 @@ export default function Home() {
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-         <Image src="/icon2.png" alt="icono" width={54} height={54} />
+            <Image src="/icon2.png" alt="icono" width={54} height={54} />
             <h1 className="text-2xl font-bold text-foreground">TesisWork</h1>
           </div>
           <Button
@@ -112,7 +120,13 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative bg-primary text-primary-foreground py-20 md:py-32 overflow-hidden">
-        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
           <source src="/video2.mp4" type="video/mp4" />
         </video>
         <div className="" />
@@ -121,14 +135,17 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block mb-6 px-4 py-2 bg-white/40 rounded-full">
-              <p className="text-sm font-medium">✨ Asesoría Profesional de Tesis</p>
+              <p className="text-sm font-medium">
+                ✨ Asesoría Profesional de Tesis
+              </p>
             </div>
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
               Tu éxito académico está a un mensaje de distancia
             </h2>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 leading-relaxed text-pretty">
-              Acompañamiento integral en tesis y trabajos finales de grado y posgrado. Convierte tu investigación en un
-              trabajo académico de excelencia.
+              Acompañamiento integral en tesis y trabajos finales de grado y
+              posgrado. Convierte tu investigación en un trabajo académico de
+              excelencia.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -143,7 +160,11 @@ export default function Home() {
                 size="lg"
                 variant="outline"
                 className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-6 h-auto border-2"
-                onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() =>
+                  document
+                    .getElementById("servicios")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Ver servicios
               </Button>
@@ -156,17 +177,27 @@ export default function Home() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Servicios que ofrecemos</h3>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Servicios que ofrecemos
+            </h3>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Acompañamiento profesional adaptado a tus necesidades académicas específicas
+              Acompañamiento profesional adaptado a tus necesidades académicas
+              específicas
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow border-2">
+              <Card
+                key={index}
+                className="p-6 hover:shadow-lg transition-shadow border-2"
+              >
                 <service.icon className="h-12 w-12 text-primary mb-4" />
-                <h4 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h4>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <h4 className="text-xl font-semibold mb-3 text-foreground">
+                  {service.title}
+                </h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
               </Card>
             ))}
           </div>
@@ -174,10 +205,12 @@ export default function Home() {
       </section>
 
       {/* Packages Section */}
-      <section  id="servicios"className="py-20 bg-muted/30">
+      <section id="servicios" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Paquetes de servicios</h3>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Paquetes de servicios
+            </h3>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
               Soluciones profesionales diseñadas para cada etapa de tu tesis
             </p>
@@ -193,11 +226,15 @@ export default function Home() {
                     Más popular
                   </div>
                 )}
-                <h4 className="text-2xl font-bold mb-2 text-foreground">{pkg.name}</h4>
-                <p className="text-3xl font-bold text-primary mb-6">{pkg.price}</p>
+                <h4 className="text-2xl font-bold mb-2 text-foreground">
+                  {pkg.name}
+                </h4>
                 <ul className="space-y-3 mb-6 flex-grow">
                   {pkg.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 text-muted-foreground">
+                    <li
+                      key={i}
+                      className="flex items-start gap-2 text-muted-foreground"
+                    >
                       <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="leading-relaxed">{feature}</span>
                     </li>
@@ -205,7 +242,13 @@ export default function Home() {
                 </ul>
                 <Button
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                  onClick={() => window.open(whatsappUrl, "_blank")}
+                  onClick={() => {
+                    const message = `Hola, me interesa consultar sobre el plan "${pkg.name}"`;
+                    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                      message,
+                    )}`;
+                    window.open(url, "_blank");
+                  }}
                 >
                   Consultar
                 </Button>
@@ -230,9 +273,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold mb-2 text-foreground">Profesionalismo académico</h4>
+                  <h4 className="text-xl font-semibold mb-2 text-foreground">
+                    Profesionalismo académico
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    Equipo especializado con experiencia en investigación académica de grado y posgrado
+                    Equipo especializado con experiencia en investigación
+                    académica de grado y posgrado
                   </p>
                 </div>
               </div>
@@ -243,9 +289,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold mb-2 text-foreground">Atención personalizada</h4>
+                  <h4 className="text-xl font-semibold mb-2 text-foreground">
+                    Atención personalizada
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    Cada trabajo se aborda de manera singular según tus necesidades específicas
+                    Cada trabajo se aborda de manera singular según tus
+                    necesidades específicas
                   </p>
                 </div>
               </div>
@@ -256,9 +305,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold mb-2 text-foreground">Modalidad 100% online</h4>
+                  <h4 className="text-xl font-semibold mb-2 text-foreground">
+                    Modalidad 100% online
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    Trabaja desde donde estés con seguimiento constante y entregas puntuales
+                    Trabaja desde donde estés con seguimiento constante y
+                    entregas puntuales
                   </p>
                 </div>
               </div>
@@ -269,9 +321,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold mb-2 text-foreground">Resultados garantizados</h4>
+                  <h4 className="text-xl font-semibold mb-2 text-foreground">
+                    Resultados garantizados
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    Alto estándar académico que cumple con las normativas institucionales
+                    Alto estándar académico que cumple con las normativas
+                    institucionales
                   </p>
                 </div>
               </div>
@@ -284,10 +339,12 @@ export default function Home() {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-3xl md:text-5xl font-bold mb-6 text-balance">¿Listo para finalizar tu tesis?</h3>
+            <h3 className="text-3xl md:text-5xl font-bold mb-6 text-balance">
+              ¿Listo para finalizar tu tesis?
+            </h3>
             <p className="text-xl mb-8 text-primary-foreground/90 leading-relaxed text-pretty">
-              Contáctanos ahora y comienza tu camino hacia el éxito académico con el acompañamiento profesional que
-              necesitas
+              Contáctanos ahora y comienza tu camino hacia el éxito académico
+              con el acompañamiento profesional que necesitas
             </p>
             <Button
               size="lg"
@@ -312,14 +369,19 @@ export default function Home() {
               <div>
                 <div className="flex items-center gap-2 mb-4">
                   <MessageCircle className="h-6 w-6 text-primary" />
-                  <h4 className="text-xl font-bold text-foreground">TesisWork</h4>
+                  <h4 className="text-xl font-bold text-foreground">
+                    TesisWork
+                  </h4>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Asesoría profesional integral en tesis y trabajos finales de grado y posgrado.
+                  Asesoría profesional integral en tesis y trabajos finales de
+                  grado y posgrado.
                 </p>
               </div>
               <div>
-                <h5 className="font-semibold mb-4 text-foreground">Servicios</h5>
+                <h5 className="font-semibold mb-4 text-foreground">
+                  Servicios
+                </h5>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Acompañamiento académico</li>
                   <li>Corrección integral</li>
@@ -355,5 +417,5 @@ export default function Home() {
         <MessageCircle className="h-8 w-8" />
       </button>
     </div>
-  )
+  );
 }
